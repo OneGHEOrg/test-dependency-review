@@ -1,0 +1,25 @@
+name: 'Dependency Review'
+# This trigger will cause the action to run on any PR between any two branches.
+# This is the default state in ordor to provide the earliest possible awareness to developers of new issues they may introduce.
+# If you want a more targeted set of PR's to be screened, you can expand this with branch and/or path names.
+on: [pull_request]
+
+permissions:
+  contents: read
+  # Necessary for summary of evaluation in PR.
+  pull-requests: write
+
+jobs:
+  dependency-review:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'Checkout Repository'
+        uses: actions/checkout@v3
+      - name: 'Dependency Review'
+        uses: actions/dependency-review-action@v3
+        with:
+          # This argument supplies the configuration file in this repo to your action.
+          config-file: './.github/dependency-review-config.yml'
+          # You only need this if the repo containing the config file is not publicly accessible.
+          # This currently includes all GHES repos.
+          #external-repo-token: ${{ secrets.GITHUB_TOKEN }} # or a personal access token
