@@ -12,7 +12,7 @@ comment_summary_in_pr: always
 # Unfortunately, while there is a draft purl spec for specifying a range of package versions, it is not yet merged into the actual spec.
 # Until this happens, we will need to specify each version individually.
 deny_packages: 
-  - 'pkg:maven/org.apache.logging.log4j/log4j-core@3.0.0'
+  - 'pkg:maven/org.apache.logging.log4j/log4j@2.16.0'
 # Enable or disable retrying the action every 10 seconds while waiting for dependency submission actions to complete.
 # This will have no effect on GHES until the Dependency Submission API is available.
 retry_on_snapshot_warnings: true
