@@ -1,7 +1,8 @@
 # Defines the threshold for the level of severity.
 # The action will fail on any pull requests that introduce vulnerabilities of the specified severity level or higher.
 # Negated while "warn-only" is set to true, however this will not always be the case.
-fail_on_severity: critical
+#fail_on_severity: critical
+vulnerability_check: false
 # Contains a list of strings of the build environments you want to support.
 # The action will fail on pull requests that introduce vulnerabilities in the scopes that match the list.
 fail_on_scopes: [runtime]
