@@ -79,4 +79,4 @@ warn_only: true
 # We are not going to run license checks for now.
 # We will look into running them later.
 # This check doesn't run on GHES anyway due to limitations in the API, so enabling it would only change things in github.com
-license_check: false
+license_check: true
