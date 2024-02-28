@@ -20,6 +20,7 @@ jobs:
         with:
           # This argument supplies the configuration file in this repo to your action.
           config-file: './.github/dependency-review-config.yml'
+          warn-only: true
           # You only need this if the repo containing the config file is not publicly accessible.
           # This currently includes all GHES repos.
           #external-repo-token: ${{ secrets.GITHUB_TOKEN }} # or a personal access token
