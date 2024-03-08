@@ -16,7 +16,7 @@ jobs:
       - name: 'Checkout Repository'
         uses: actions/checkout@v3
       - name: 'Dependency Review'
-        uses: actions/dependency-review-action@v3
+        uses: OneGHEOrg/dependency-review-action@fix-705
         with:
           # This argument supplies the configuration file in this repo to your action.
           config-file: './.github/dependency-review-config.yml'
