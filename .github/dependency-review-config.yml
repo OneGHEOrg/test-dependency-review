@@ -13,7 +13,6 @@ comment_summary_in_pr: always
 # Until this happens, we will need to specify each version individually.
 deny_packages:
   # log4j vulnerable to log4shell
-  - 'pkg:maven/org.apache.logging.log4j/log4j-core'
   - 'pkg:maven/org.apache.logging.log4j/log4j-core@2.17.0'
 # Any number of groups (namespaces in purl format) to block in a PR.
 deny_groups:
